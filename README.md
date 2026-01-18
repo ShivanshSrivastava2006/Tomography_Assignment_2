@@ -19,14 +19,13 @@ A lightweight Multi-Layer Perceptron (MLP) is used due to its simplicity, effici
 ---
 
 ## Methodology
-Instead of directly predicting the density matrix \( \rho \), the model predicts a lower triangular matrix \( L \).  
+Instead of directly predicting the density matrix (rho), the model predicts a lower triangular matrix (L).
 The density matrix is reconstructed as:
 
-\[
-\rho = \frac{LL^\dagger}{\mathrm{Tr}(LL^\dagger)}
-\]
+rho = (L L†) / Tr(L L†)
 
 This ensures all physical constraints are satisfied automatically.
+
 
 ---
 
