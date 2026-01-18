@@ -31,3 +31,47 @@ This ensures all physical constraints are satisfied automatically.
 ---
 
 ## Repository Structure
+
+/src
+model.py # Neural network model definition
+train.py # Training and model generation script
+/outputs
+model.pt # Saved trained model
+/docs
+model_working.md
+replication.md
+AI_USAGE.md
+README.md
+
+
+---
+
+## How to Run
+See `docs/replication.md` for detailed, step-by-step instructions to reproduce the results, including environment setup and training execution.
+
+---
+
+## Evaluation Metrics
+The reconstructed density matrices are evaluated using:
+- Quantum Fidelity
+- Trace Distance
+- Inference Latency per reconstruction
+
+---
+
+## AI Usage Disclosure
+This project used AI tools (e.g., ChatGPT) for code scaffolding and documentation assistance.  
+Details are provided in `AI_USAGE.md`.
+
+---
+
+## Notes
+- Synthetic data is used for demonstration purposes.
+- The focus of this project is correctness, constraint enforcement, and reproducibility rather than performance optimization.
+
+---
+
+## Author
+Shivansh Srivastava  
+Indian Institute of Technology Roorkee
+
