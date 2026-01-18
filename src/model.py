@@ -17,5 +17,7 @@ class DensityMatrixMLP(nn.Module):
         idx = torch.tril_indices(self.dim, self.dim)
         L[:, idx[0], idx[1]] = self.fc(x)
         rho = L @ L.conj().transpose(-1, -2)
-        rho = rho / torch.trace(rho, dim1=1, dim2=2).unsqueeze(-1).unsqueeze(-1)
+        trace = rho.diagonal(dim1=1, dim2=2).sum(-1)
+        rho = rho / trace.unsqueeze(-1).unsqueeze(-1)
+
         return rho
